@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practise of function</title>
+  </head>
+  <body>
+    <script>
+      // 1. create a fn to check number is odd or even
+      function oddEven(num) {
+        if (num % 2 === 0) {
+          return `number is even `;
+        } else {
+          return `number is Odd`;
+        }
+      }
+      console.log(oddEven(21));
+
+      // create a fn to check the larger number in two nums
+
+      function largeNum(num1, num2) {
+        if (num1 > num2) {
+          return `Num1 is larger than Num2`;
+        } else if (num1 === num2) {
+          return `Num1 and Num2 both are equal`;
+        } else {
+          return `Num2 is larger than Num1`;
+        }
+      }
+      console.log(largeNum(10, 12));
+      console.log(largeNum(12, 12));
+      console.log(largeNum(20, 12));
+
+      // convert celsius in F
+
+      function convertFahrenheit(celsius) {
+        let result = (9 / 5) * celsius + 32;
+        return `${celsius} in F: ${result}`;
+      }
+      console.log(convertFahrenheit(43));
+    </script>
+  </body>
+</html>

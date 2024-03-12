@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practise - variable</title>
+  </head>
+  <body>
+    <p id="name_display"></p>
+    <script>
+      const name = "Prakash";
+      console.log(name);
+
+      document.querySelector("#name_display").innerText = name;
+
+      const GSTPercentage = 18;
+      let bagPrice = 15599 - (10 / 100) * 15599 - 272;
+      let jeansPrice = 2499 - (41 / 100) * 2499 - 29;
+
+      let cartValue = Math.round(
+        ((jeansPrice + bagPrice + 25 + 28) * 118) / 100
+      );
+
+      let bagSummarry = `Your final myntra bag value is ${bagValue}`;
+
+      console.log(cartValue);
+      console.log(eval("2+3+5*12-15"));
+    </script>
+  </body>
+</html>

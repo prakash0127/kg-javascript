@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practise Set Array-loop</title>
+  </head>
+  <body>
+    <script>
+      // let arr = [5, 6];
+      // //add to the begining 4
+      // arr.unshift(4);
+      // console.log(arr);
+
+      // //add to the last 7
+      // arr.push(7);
+      // console.log(arr);
+
+      // 2. create a method to print arr index's value
+      // function elementPosition(arr, position) {
+      //   return arr[position - 1];
+      // }
+      // let arr = [11, 52, 23, 50, 55, 87, 57, 68, 90];
+      // console.log("At index position 6 value is ", elementPosition(arr, 6));
+
+      // slice method : use to create a copy of deleted element but it won't affect the original array
+      // it also take two arguments first is the starting point of index and second is the last index,
+      // but 2nd index value is not included in the new array
+      // let num = [2, 5, 11, 20, 12];
+      // console.log("sliced array ", num.slice(1, 3));
+      // console.log("Original num array ", num);
+      // function arrCopy(arr) {
+      //   return arr.slice(0, arr.length);
+      // }
+      // console.log("New copy of num Array ", arrCopy(num));
+
+      // pick prime numbers
+
+      //creatinh a method to find prime
+
+      // function isPrime(num) {
+      //   for (let i = 2; i < num; i++) {
+      //     if (num % i == 0) {
+      //       return false;
+      //     }
+      //   }
+      //   return true;
+      // }
+
+      // console.log(isPrime(5));
+      // console.log(isPrime(12));
+      // console.log(isPrime(9));
+      // console.log(isPrime(7));
+
+      // let num = 2;
+      // let i = 0;
+      // while (true) {
+      //   if (isPrime(num)) {
+      //     console.log(num);
+      //     i++;
+      //     if (i >= 5) {
+      //       break;
+      //     }
+      //   }
+      //   num++;
+      // }
+      // let n = 0;
+      // while (n % n == 0) {
+      //   n++;
+      // }
+      // console.log(n);
+
+      // to print reverse 10 numbers
+      // for (let i = 10; i >= 0; i--) {
+      //   console.log(i);
+      // }
+
+      // print positive value
+
+      // let nums = [1, -6, 5, 7, -98];
+      // for (let i = 0; i < nums.length; i++) {
+      //   if (nums[i] < 0) continue;
+      //   console.log(nums[i]);
+      // }
+
+      // accumulate pattern concatinate all the strings
+
+      let str = ["hello ", "how ", "are ", "you?"];
+      let result = "";
+
+      for (let i = 0; i < str.length; i++) {
+        result += str[i] + " ";
+      }
+
+      // by using join method as well we can do
+      console.log(str.join(" "));
+      console.log(result);
+    </script>
+  </body>
+</html>

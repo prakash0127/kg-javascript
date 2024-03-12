@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise-Object</title>
+  </head>
+  <body>
+    <script>
+      let product = {
+        comapany: "Mango",
+        price: 889,
+        item: "Cotton T-shirt",
+      };
+      console.log(product);
+
+      let obj1 = {
+        name: "John",
+        age: 15,
+        id: 701,
+      };
+      let obj2 = {
+        name: "Rahul",
+        age: 24,
+        id: 342,
+      };
+
+      let obj3 = obj1;
+      obj1.name = "Zoya";
+
+      console.log(obj3.name); // zoya because obj3 is refering to obj1
+
+      let obj4 = {
+        message: "Good Job",
+        status: "complete",
+        work: "done",
+      };
+      let { message, status } = obj4;
+
+      obj4["delivery-time"] = 24;
+
+      console.log(`msg is ${message}, and status of the product is ${status}`);
+      console.log(obj4["delivery-time"]);
+
+      function isIdentiacalproduct(product1, product2) {
+        if (typeof product1 !== "object" || typeof product2 !== "object") {
+          return false;
+        }
+        if (product1 == product2) {
+          return true;
+        }
+        if (
+          product1.name === product2.name &&
+          product1.age === product2.age &&
+          product1.id === product2.id
+        ) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+      console.log(isIdentiacalproduct(obj1, obj2));
+      console.log(isIdentiacalproduct(obj1, obj1));
+      console.log(isIdentiacalproduct(obj3, obj4));
+    </script>
+  </body>
+</html>

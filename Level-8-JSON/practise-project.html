@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PractiseSet-JSON</title>
+    <style>
+      #mybtn {
+        height: 50px;
+        width: 50px;
+        border: none;
+        border-radius: 4px;
+        padding: 8px;
+        font-size: 16px;
+      }
+      .js-odd {
+        background-color: chocolate;
+      }
+      .js-even {
+        background-color: palegreen;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="greeting"></h1>
+    <button id="mybtn" onclick="btnPressed()"></button>
+    <script>
+      let numberOftimesClicked =
+        localStorage.getItem("numberOftimesClicked") || 0;
+      function btnPressed() {
+        numberOftimesClicked++;
+        localStorage.setItem("numberOftimesClicked", numberOftimesClicked);
+        updateButton();
+      }
+
+      function updateButton() {
+        let btn = document.querySelector("#mybtn");
+
+        if (numberOftimesClicked % 2 == 0) {
+          // in 1-way
+          btn.classList.remove("js-odd");
+          btn.classList.add("js-even");
+          // in other ways
+          // btn.style.backgroundColor = "blue";
+        } else {
+          // in 1-way
+          btn.classList.remove("js-even");
+          btn.classList.add("js-odd");
+          // in other ways
+          // btn.style.backgroundColor = "orange";
+        }
+        btn.innerHTML = numberOftimesClicked;
+      }
+      updateButton();
+      function DoGreeting(person = "Dear") {
+        let myDate = new Date();
+        let hrs = myDate.getHours();
+        let heading = document.querySelector(".greeting");
+
+        if (hrs >= 0 && hrs < 12) {
+          heading.innerText = `${person}, Good Morning`;
+        } else if (hrs >= 15 && hrs < 18) {
+          heading.innerText = `${person}, Good Evening`;
+        } else if (hrs >= 18 && hrs < 23) {
+          heading.innerText = `${person}, Good Night`;
+        }
+      }
+      DoGreeting("Prakash");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objects</title>
+  </head>
+  <body>
+    <script>
+      // let user = {
+      //   name: "john",
+      //   age: 40,
+      // };
+      // console.log(user.name);
+      // console.log(user["age"]);
+      // why we need bracket notation because some time property name has space because of that
+
+      // let product = {
+      //   company: "Mango",
+      //   price: 890,
+      //   item_name: "T-shirt",
+      //   displayprice: function () {
+      //     console.log(`Price of the product is ${product.price}`);
+      //   },
+      // };
+      // product.displayprice();
+
+      // change the proverty value so
+
+      // product.company = "Banana";
+
+      // console.log(product.company); // Banana
+
+      // console.log("this a autoboxing".length);
+      // console.log("this a autoboxing".toUpperCase());
+
+      // let a = 10;
+      // let b = a;
+      // console.log(a, b);
+
+      // a = 20;
+      // console.log(a, b);
+
+      let product = {
+        company: "Mango",
+        price: 890,
+        item_name: "T-shirt",
+        displayprice: function () {
+          console.log(`Price of the product is ${product.price}`);
+        },
+      };
+
+      let { company, price } = product;
+      console.log(company);
+      console.log(price);
+    </script>
+  </body>
+</html>
