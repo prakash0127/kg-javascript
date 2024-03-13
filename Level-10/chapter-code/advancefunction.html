@@ -6,7 +6,49 @@
     <title>Document</title>
   </head>
   <body>
+    <button id="my-btn">Click-Me</button>
     <script>
+      // event listen on button
+
+      let btn = document.querySelector("#my-btn");
+
+      // btn.addEventListener("click", (event) => console.log("button clicked"));
+
+      // we can do in other way like
+
+      let behaviour = (event) => console.log("button clicked");
+
+      btn.addEventListener("click", behaviour);
+
+      let printDate = (event) => console.log(new Date());
+
+      btn.addEventListener("click", printDate);
+
+      btn.removeEventListener("click", behaviour);
+
+      // suppose if you want remove any event you can do that like above but keep the event in define in function while calling
+
+      // forEach-loop
+      // An array method that work for arrays
+
+      let arr = [1, 2, 3, 4, 5, 6];
+
+      // arr.forEach(function (i) {
+      //   console.log(i);
+      // });
+
+      // it will do the iterations
+
+      let ary = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+      // want only odd number
+      let odds = ary.filter((num, index) => {
+        if (num % 2 === 1) {
+          return true;
+        } else {
+          return false;
+        }
+      });
+      console.log(odds);
       // let sum = function (num1, num2) {
       //   return num1 + num2;
       // };
@@ -27,14 +69,14 @@
       // };
       // console.log(sum(10, 5));
 
-      setTimeout(function () {
-        console.log("wakeUp");
-      }, 2000);
+      // setTimeout(function () {
+      //   console.log("wakeUp");
+      // }, 2000);
 
-      let alarm = () => console.log(`wake-up bro`);
-      let intervalId = setInterval(alarm, 2000);
+      // let alarm = () => console.log(`wake-up bro`);
+      // let intervalId = setInterval(alarm, 2000);
 
-      setTimeout(() => clearInterval(intervalId), 10000);
+      // setTimeout(() => clearInterval(intervalId), 10000);
     </script>
   </body>
 </html>
